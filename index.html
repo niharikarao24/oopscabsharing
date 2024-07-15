@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="login-form" class="form-container">
+            <h2>Login</h2>
+            <input type="text" id="login-username" placeholder="Username" required>
+            <input type="password" id="login-password" placeholder="Password" required>
+            <button onclick="login()">Login</button>
+            <p>Don't have an account? <a href="#" onclick="showSignupForm()">Sign Up</a></p>
+        </div>
+        
+        <div id="signup-form" class="form-container hidden">
+            <h2>Sign Up</h2>
+            <input type="text" id="signup-username" placeholder="Username" required>
+            <input type="password" id="signup-password" placeholder="Password" required>
+            <select id="signup-role" required onchange="toggleDriverFields()">
+                <option value="" disabled selected>Select your role</option>
+                <option value="student">Student</option>
+                <option value="faculty">Faculty</option>
+                <option value="driver">Driver</option>
+            </select>
+            <input type="text" id="signup-gender" placeholder="Gender" required>
+            <input type="file" id="signup-profile-picture" accept="image/png, image/jpeg" required>
+            
+            <div id="driver-fields" class="hidden">
+                <h3>Driver Details</h3>
+                <input type="text" id="driver-name" placeholder="Name">
+                <input type="text" id="driver-phone" placeholder="Phone Number">
+                <input type="text" id="driver-car-model" placeholder="Car Model">
+                <input type="text" id="driver-car-number" placeholder="Car Number">
+            </div>
+
+            <button onclick="signup()">Sign Up</button>
+            <p>Already have an account? <a href="#" onclick="showLoginForm()">Login</a></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

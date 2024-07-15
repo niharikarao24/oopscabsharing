@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Host a Ride</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h2>Host a Ride</h2>
+            <select id="start-location" required>
+                <option value="" disabled selected>Start Location</option>
+                <option value="campus">Campus</option>
+                <option value="airport">Airport</option>
+                <option value="secunderabad railway station">Secunderabad Railway Station</option>
+                <option value="bolarum railway station">Bolarum Railway Station</option>
+            </select>
+            <select id="end-location" required>
+                <option value="" disabled selected>End Location</option>
+                <option value="campus">Campus</option>
+                <option value="airport">Airport</option>
+                <option value="secunderabad railway station">Secunderabad Railway Station</option>
+                <option value="bolarum railway station">Bolarum Railway Station</option>
+            </select>
+            <select id="seats" required>
+                <option value="" disabled selected>Number of Seats</option>
+                <option value="3">3</option>
+                <option value="5">5</option>
+                <option value="7">7</option>
+            </select>
+            <input type="date" id="ride-date" required>
+            <input type="time" id="ride-time" step="900" required>
+            <input type="text" id="driver-details" placeholder="Driver Details" required>
+            <button onclick="hostRide()">Submit</button>
+            <div class="nav-bar">
+                <button onclick="window.location.href='search.html'">Search for a Ride</button>
+                <button onclick="window.location.href='allRides.html'">Display All Rides</button>
+                <button onclick="window.location.href='myRides.html'">My Rides</button>
+                <button onclick="logout()">Logout</button>
+                <button onclick="home()">Home</button>
+            </div>
+        </div>
+    </div>
+    <script src="host.js"></script>
+</body>
+</html>
